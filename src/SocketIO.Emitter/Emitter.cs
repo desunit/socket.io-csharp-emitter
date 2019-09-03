@@ -114,7 +114,7 @@ namespace SocketIO.Emitter
 
         private byte[] GetPackedMessage(Dictionary<string, object> packet, Dictionary<string, object> data)
         {
-            var serializer = MessagePackSerializer.Create<object[]>();
+            var serializer = MessagePackSerializer.Get<object[]>();
 
             using (Stream stream = new MemoryStream())
             {
